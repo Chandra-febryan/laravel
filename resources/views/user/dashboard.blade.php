@@ -34,7 +34,8 @@
 <body class="bg-gray-100">
 
     @include('partials.navbar')
-
+<div class="bg-cover bg-center h-64" style="background-image: url('{{ asset('images/123.jpg') }}');" >
+</div>
     <div class="max-w-7xl mx-auto px-6 py-10">
         <h1 class="text-3xl font-bold text-primary mb-6">
             Selamat datang, {{ Auth::user()->username }}
@@ -67,7 +68,7 @@
                 @foreach ([
                     ['icon' => 'route', 'title' => 'Info Rute', 'desc' => 'Informasi rute perjalanan Trans Jatim di seluruh Jawa Timur', 'url' => '/rute'],
                     ['icon' => 'ticket-alt', 'title' => 'Info Tiket', 'desc' => 'Detail tiket Trans Jatim termasuk harga dan promo', 'url' => '/tiket'],
-                    ['icon' => 'bus', 'title' => 'Jadwal Bus', 'desc' => 'Jadwal keberangkatan dan kedatangan bus Trans Jatim', 'url' => '/jadwal'],
+                    ['icon' => 'bus', 'title' => 'Jadwal Bus', 'desc' => 'Jadwal keberangkatan dan kedatangan bus Trans Jatim', 'url' => '/jadwal-user'],
                 ] as $layanan)
                     <div class="border border-gray-200 rounded-lg p-5 hover:border-accent transition">
                         <div class="flex items-start mb-3">
@@ -128,4 +129,5 @@
     </div>
 
 </body>
+@include('partials.footer')
 </html>

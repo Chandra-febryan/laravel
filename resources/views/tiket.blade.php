@@ -1,10 +1,10 @@
 @extends('layout.app')
 
 @section('content')
-<div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-12 px-6 text-center">
+<div class="bg-gradient-to-r from-green-500 to-blue-500 text-white py-12 px-6 text-center">
     <h1 class="text-3xl md:text-4xl font-bold mb-4">Pesan Tiket Bus Trans Jatim Online</h1>
     <p class="text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-        Jadwal bus, trayek, tempat keberangkatan, fasilitas, harga tiket, hingga pilih kursi.
+        Jadwal bus, rute, tempat keberangkatan, fasilitas, harga tiket, hingga pilih kursi.
     </p>
 </div>
 

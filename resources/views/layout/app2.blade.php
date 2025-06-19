@@ -15,11 +15,10 @@
         <aside class="w-64 bg-green-800 text-white p-5 space-y-2">
             <div class="text-xl font-bold mb-5">🌐 Admin JatimGo</div>
             <nav class="space-y-2">
-                <a href="{{ route('admin.dashboard') }}" class="block hover:bg-green-600 px-3 py-2 rounded">User</a>
+                <a href="{{ route('admin.dashboard') }}" class="block hover:bg-green-600 px-3 py-2 rounded">Beranda</a>
                 <a href="{{route('jadwal.index')}}" class="block hover:bg-green-600 px-3 py-2 rounded">Atur Jadwal</a>
-                <a href="#" class="block hover:bg-green-600 px-3 py-2 rounded" >Role</a>
-                <a href="#" class="block hover:bg-green-600 px-3 py-2 rounded">Menu</a>
-                <a href="#" class="block hover:bg-green-600 px-3 py-2 rounded">Assign Role</a>
+                <a href="{{route('admin.transaksi')}}" class="block hover:bg-green-600 px-3 py-2 rounded" >Transaksi</a>
+                <a href="{{ route('logout') }}"class="block hover:bg-green-600 px-3 py-2 rounded"> Logout</a>
                </nav>
         </aside>
 

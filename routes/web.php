@@ -7,6 +7,8 @@ use App\Http\Controllers\TiketController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\AdminTransaksiController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +30,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 });
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', function () {
         if (auth()->user()->role === 'user') {
@@ -40,6 +43,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/dashboard', function () {
     return view('user.dashboard');
 })->name('dashboard');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/tiket', [TiketController::class, 'index'])->name('tiket.index');
 Route::get('/tiket/detail/{id}', [TiketController::class, 'detail'])->name('tiket.detail');
@@ -51,7 +55,7 @@ Route::get('/logout', function (Request $request) {
     $request->session()->regenerateToken();
     return redirect('/'); // Arahkan ke halaman utama (welcome)
 })->name('logout');
-
+});
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])
     ->middleware(['auth', 'admin'])
@@ -69,4 +73,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('jadwal/{id}', [JadwalController::class, 'update'])->name('jadwal.update');
     Route::delete('jadwal/{id}', [JadwalController::class, 'destroy'])->name('jadwal.destroy');
 });
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/transaksi', [AdminTransaksiController::class, 'index'])->name('admin.transaksi');
+    Route::patch('/admin/transaksi/{id}/status', [AdminTransaksiController::class, 'updateStatus'])->name('admin.transaksi.updateStatus');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/jadwal-user', [App\Http\Controllers\JadwalController::class, 'userView'])->name('user.jadwal');
 });

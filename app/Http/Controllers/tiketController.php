@@ -64,7 +64,7 @@ class TiketController extends Controller
         'jadwal_id' => $id,
         'jumlah_kursi' => $request->jumlah_kursi,
         'total' => $total,
-        'status' => 'selesai',
+        'status' => 'menunggu pembayaran',
         'metode_bayar' => $request->metode_bayar ?? 'QR',
         'create_at' => now(),
         'update_at' => now(),

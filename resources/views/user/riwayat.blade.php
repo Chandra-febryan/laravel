@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="max-w-5xl mx-auto mt-10 bg-white p-6 rounded shadow">
-    <h1 class="text-2xl font-bold text-gray-800 mb-4">Riwayat Transaksi Tiket</h1>
+    <h1 class="text-2xl font-bold text-gray-800 mb-4 ">Riwayat Transaksi Tiket</h1>
 
     @if($riwayats->isEmpty())
         <p class="text-gray-500">Belum ada transaksi.</p>
     @else
-        <table class="w-full text-left border">
+        <table class="w-full text-left border ">
             <thead>
-                <tr class="bg-gray-100">
+                <tr class=" bg-green-500">
                     <th class="p-2 border">Tanggal</th>
                     <th class="p-2 border">Kode Bus</th>
                     <th class="p-2 border">Rute</th>

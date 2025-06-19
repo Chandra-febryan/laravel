@@ -16,11 +16,11 @@ return new class extends Migration
         $table->foreignId('jadwal_id')->constrained('tb_rute', 'id_rute')->onDelete('cascade');
         $table->integer('jumlah_kursi');
         $table->integer('total');
-        $table->string('status', 20)->default('pending');
+        $table->string('status', 20)->default('menunggu pembayaran');
         $table->string('metode_bayar', 20)->nullable();
         $table->timestamps();
-        $table->timestamp('created_at')->nullable();
-        $table->timestamp('updated_at')->nullable();
+        $table->timestamp('create_at')->nullable();
+        $table->timestamp('update_at')->nullable();
     });
 }
 

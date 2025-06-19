@@ -11,7 +11,7 @@
         Total Bayar: <strong class="text-orange-600">Rp {{ number_format($total, 0, ',', '.') }}</strong>
     </p>
 
-     <form action="{{ route('tiket.index') }}" method="GET">
+     <form action="{{ route('tiket.bayar', $jadwal->id_rute) }}" method="POST">
     @csrf
     <input type="hidden" name="jumlah_kursi" value="{{ $jumlah_kursi }}">
     <div class="mb-4 text-left">

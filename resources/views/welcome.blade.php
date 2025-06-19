@@ -32,7 +32,7 @@
     <!-- Hero Section -->
     <section >
 
-        <div class="bg-cover bg-center h-64" style="background-image: url('{{ asset('images/bus.jpg') }}');" h-full flex items-center justify-center">
+        <div class="bg-cover bg-center h-64" style="background-image: url('{{ asset('images/bus.jpg') }}');" >
             <div class="text-center text-white px-4 py-8">
                 <h1 class=" text-green-500 text-4xl md:text-5xl font-bold mb-4">JatimGO - Transportasi Umum Jawa Timur</h1>
                 <p class=" text-gray-500  text-lg md:text-xl font-semibold">Layanan transportasi umum terintegrasi yang memudahkan perjalanan Anda</p>

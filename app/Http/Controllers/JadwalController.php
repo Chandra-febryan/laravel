@@ -71,6 +71,14 @@ class JadwalController extends Controller
         return redirect()->route('jadwal.index')->with('success', 'Jadwal berhasil dihapus.');
     }
   
+public function userView()
+{
+    $jadwals = DB::table('tb_jadwal as j')
+        ->join('tb_armada as a', 'j.bus_id', '=', 'a.id')
+        ->select('a.kode_bus', 'a.rute', 'j.bus_start', 'j.bus_end')
+        ->get();
 
+    return view('user.jadwal', compact('jadwals'));
+}
 
 }

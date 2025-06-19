@@ -33,10 +33,10 @@
                         <td class="py-2 px-4">{{ $jadwal->bus_start }}</td>
                         <td class="py-2 px-4">{{ $jadwal->bus_end }}</td>
                         <td class="py-2 px-4">
-                            <a href="{{ route('jadwal.edit', $jadwal->id) }}" class="text-blue-600 hover:underline">Edit</a> |
+                            <a href="{{ route('jadwal.edit', $jadwal->id) }}" class="inline-block px-2 text-white hover:underline bg-green-700 rounded">Edit</a> |
                             <form action="{{ route('jadwal.destroy', $jadwal->id) }}" method="POST" class="inline">
                                 @csrf @method('DELETE')
-                                <button type="submit" onclick="return confirm('Yakin ingin hapus?')" class="text-red-600 hover:underline">
+                                <button type="submit" onclick="return confirm('Yakin ingin hapus?')" class="inline-block px-2 text-white hover:underline bg-red-600 rounded">
                                     Hapus
                                 </button>
                             </form>
