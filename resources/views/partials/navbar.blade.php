@@ -2,7 +2,6 @@
 
 <nav class="bg-green-700 text-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- Logo -->
         <div class="text-2xl font-bold tracking-wide">JatimGO</div>
 
         <!-- Menu Utama -->
@@ -14,13 +13,11 @@
             <a href="{{ route('riwayat') }}" class="hover:text-green-200 transition font-medium">Riwayat</a>
 
             @auth
-<!-- Logout Button -->
+
 <a href="{{ route('logout') }}"
    class="ml-4 bg-red-500 hover:bg-red-400 text-white px-3 py-1 rounded font-medium">
    Logout
 </a>
-               
-           
             @endauth
 </div>
         </div>
