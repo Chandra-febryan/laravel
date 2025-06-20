@@ -9,7 +9,6 @@
             <a href="{{ route('dashboard') }}" class="hover:text-green-200 transition font-medium">Beranda</a>
             <a href="{{route('user.jadwal')}}" class="hover:text-green-200 transition font-medium">Jadwal</a>
             <a href="{{ route('tiket.index') }}" class="hover:text-green-200 transition font-medium">Tiket</a>
-            <a href="{{ url('/artikel') }}" class="hover:text-green-200 transition font-medium">Artikel</a>
             <a href="{{ route('riwayat') }}" class="hover:text-green-200 transition font-medium">Riwayat</a>
 
             @auth
