@@ -87,16 +87,6 @@
                 @endforeach
             </div>
         </div>
-
-        <!-- Artikel -->
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold text-primary">Artikel & Berita Terkini</h2>
-                <a href="{{ url('/artikel') }}" class="text-accent font-medium hover:underline">Lihat Semua</a>
-            </div>
-            <!-- Placeholder artikel -->
-        </section>
-
         <!-- SDGs Section -->
         <section class="bg-green-50 rounded-xl p-8 mb-12">
             <div class="flex flex-col md:flex-row items-center">
