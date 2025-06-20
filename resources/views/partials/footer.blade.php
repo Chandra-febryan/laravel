@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer - JatimGO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#4caf50',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
 <footer class="bg-gray-800 text-gray-300 pt-12 pb-6">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -52,29 +75,33 @@
                 <p class="text-sm mb-4">
                     Dapatkan informasi terbaru tentang promo dan update rute langsung ke email Anda.
                 </p>
-                <div class="flex">
-                    <input type="email" placeholder="Alamat Email" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-400 w-full">
-                    <button class="bg-green-400 hover:bg-green-600 px-4 py-2 rounded-r-lg transition">
-                        <i class="fas fa-paper-plane text-white"></i>
+                <form action="#" method="POST" class="flex">
+                    <input type="email" placeholder="Alamat Email" class="bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-accent w-full">
+                    <button type="submit" class="bg-accent hover:bg-green-600 px-4 py-2 rounded-r-lg transition">
+                        <i class="fas fa-paper-plane"></i>
                     </button>
-                </div>
+                </form>
             </div>
         </div>
 
         <div class="border-t border-gray-700 pt-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-sm mb-4 md:mb-0">
-                    &copy; 2023 JatimGO. All rights reserved.
+                    &copy; 2025 JatimGO. All rights reserved.
                 </p>
-                <div class="flex space-x-6 text-sm">
-                    <a href="#" class="hover:text-green-400 transition">Kebijakan Privasi</a>
-                    <a href="#" class="hover:text-green-400 transition">Syarat & Ketentuan</a>
-                    <a href="#" class="hover:text-green-400 transition">FAQ</a>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-sm hover:text-accent transition">Kebijakan Privasi</a>
+                    <a href="#" class="text-sm hover:text-accent transition">Syarat & Ketentuan</a>
+                    <a href="#" class="text-sm hover:text-accent transition">FAQ</a>
                 </div>
             </div>
         </div>
+
         <div class="text-center text-xs text-gray-600 mt-10">
             © 2025 JatimGo.co.id
         </div>
     </div>
 </footer>
+
+</body>
+</html>
